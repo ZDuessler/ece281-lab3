@@ -126,10 +126,10 @@ begin
         -- right turn
         w_right <= '1'; wait for k_clk_period;
              assert w_lights_L = "000" report "bad right turn left 1" severity failure;
-             assert w_lights_R = "100" report "bad right turn right 1" severity failure;
+             assert w_lights_R = "001" report "bad right turn right 1" severity failure;
         w_right <= '0'; wait for k_clk_period;
              assert w_lights_L = "000" report "bad right turn left 2" severity failure;
-             assert w_lights_R = "110" report "bad right turn right 2" severity failure;
+             assert w_lights_R = "011" report "bad right turn right 2" severity failure;
         w_right <= '0'; wait for k_clk_period;
               assert w_lights_L = "000" report "bad right turn left 3" severity failure;
               assert w_lights_R = "111" report "bad right turn right 3" severity failure;  
