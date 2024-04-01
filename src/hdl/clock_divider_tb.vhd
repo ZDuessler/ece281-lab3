@@ -70,14 +70,14 @@ architecture test_bench of clock_divider_tb is
 	signal reset, slow_clk	: std_logic	:= '0';
 	
 	-- Set clk divide amount here
-	constant k_clock_divs	: natural	:= 10;
+	constant k_clock_divs	: natural	:= 50000000;
 	
 begin
 	-- PORT MAPS ----------------------------------------
 
 	-- map ports for any component instances (port mapping is like wiring hardware)
 	uut_inst : clock_divider 
-	generic map ( k_DIV => k_clock_divs )
+	generic map ( k_DIV => 50000000 )
 	port map (
 		i_clk   => clk,
 		i_reset => reset,
